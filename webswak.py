@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+##################################################
+#
+# Title:   webswak - The WEB Swiss Army Knife
+# Author:  @HD0x01
+# Version: 1.0
+#
+##################################################
+
 import argparse
 import http.server
 import ssl
@@ -78,6 +86,18 @@ class SafeHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         except (ssl.SSLError, BrokenPipeError, socket.error):
             pass
 
+def banner():
+    banner = r'''
+             _                      _     
+            | |                    | |    
+ _ _ _ _____| |__   ___ _ _ _ _____| |  _ 
+| | | | ___ |  _ \ /___) | | (____ | |_/ )
+| | | | ____| |_) )___ | | | / ___ |  _ ( 
+ \___/|_____)____/(___/ \___/\_____|_| \_)
+                                         v1.0 by HD0x01
+'''
+    return banner
+
 def cleanup_temp_cert():
     if temp_cert_dir and os.path.isdir(temp_cert_dir):
         shutil.rmtree(temp_cert_dir)
@@ -103,6 +123,7 @@ def main():
     parser.add_argument("-max", "--tls-max", choices=TLS_VERSIONS.keys(), default="TLS1.3", help="Maximal version =TLS1.3")
     args = parser.parse_args()
 
+    print (banner())
     args.mode = args.mode.upper()
     args.protocol = args.protocol.upper()
 
@@ -176,3 +197,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
