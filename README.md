@@ -24,7 +24,7 @@ Ideal for **developers**, **DevOps**, and **security testing** (Pentration Teste
 
 ### Clone the repository
 ```bash
-git clone https://github.com/yourusername/webswak.git
+git clone https://github.com/HD0x01/webswak.git
 ```
 then 
 ```bash 
