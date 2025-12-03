@@ -56,7 +56,7 @@ Note: You should maybe add it to .bashrc to make it persistant
 sudo cp webswak.py /usr/local/bin/webswak && sudo chmod +x /usr/local/bin/webswak
 ```
 #### On Windows
-**Note: Python has to be already installedon the system.**
+**Note: Python has to be already installed on the system.**
 
 Copy webswaks.py to a folder like `C:\PyCode` and create a webswak.cmd inside the `%PATH%` e.g., in `C:\Windows\System32\`.
 
